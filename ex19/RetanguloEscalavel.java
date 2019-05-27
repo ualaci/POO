@@ -49,8 +49,8 @@ public class RetanguloEscalavel implements ObjetoGeometrico, Escalavel{
 	}
 	
 	public Ponto centro() throws Exception{
-		Ponto pc = new Ponto((this.pontoEsquerdo.getX() + this.pontoDireito.getX())/2,(this.pontoEsquerdo.getY() + this.pontoDireito.getY())/2);
-		return pc;
+		Ponto middle = new Ponto((this.pontoEsquerdo.getX() + this.pontoDireito.getX())/2,(this.pontoEsquerdo.getY() + this.pontoDireito.getY())/2);
+		return middle;
 	}
 	
 	public void amplia(double _escala) throws Exception{
@@ -61,9 +61,7 @@ public class RetanguloEscalavel implements ObjetoGeometrico, Escalavel{
 	public void espelha() throws Exception{
 			this.pontoEsquerdo = new Ponto(this.pontoEsquerdo.getX()*(-1),this.pontoEsquerdo.getY());
 			this.pontoDireito = new Ponto(this.pontoDireito.getX()*(-1),this.pontoDireito.getY());
-			/*
-			this.PontoEsquerdo.setX(this.PontoEsquerdo.getX()*(-1));
-			this.PontoDireito.setX(this.PontoDireito.getX()*(-1));*/
+
 	}
 	public ObjetoGeometrico clona() throws Exception{
 		RetanguloEscalavel r = new RetanguloEscalavel(this.pontoEsquerdo.getX(),this.pontoEsquerdo.getY(),this.pontoDireito.getX(),this.pontoDireito.getY());
