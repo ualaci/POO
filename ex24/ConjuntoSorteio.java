@@ -38,7 +38,7 @@ public class ConjuntoSorteio implements Serializable {
 		for(int i=0;i<numeroDeSorteios;i++) {
 			Sorteio _valorSorteado = new Sorteio (_data);
 			this.listaDeSorteios.add(_valorSorteado);
-			_data.incrementa();
+			_data = _data.incrementa(_data);
 		}
 	}
 

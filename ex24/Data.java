@@ -92,7 +92,27 @@ public class Data {
 
         return true;
     }
+    
 
+    public Data incrementa(Data _data) throws Exception {// porque nao declara Data DataAIncrementar?
+        try {
+            _data.setData(getDia()+1,getMes(),getAno());
+        }
+        catch(Exception dia){
+
+            try { _data.setData(1,getMes()+1,getAno()); }
+            catch(Exception mes) {
+
+                try { _data.setData(1,1,getAno()+1); }
+                catch(Exception ano) {
+
+                    this.setData(getDia(),getMes(),getAno());
+                }
+            }
+        }
+        return _data;
+    }
+    
     public void incrementa() throws Exception {
         try {
             this.setData(getDia()+1,getMes(),getAno());

@@ -19,9 +19,9 @@ public abstract class Arquivo {
 	 * @param _objeto instancia que ser gravada no arquivo
 	 * @exception IOException problemas na criacao do arquivo ou gravacao
 	 */
-	static public void grava(String _nomeArquivo, Object _objeto) throws IOException {
+	static public void grava(String _nomeArquivo, Sorteio _objeto) throws IOException {
 		ObjectOutputStream buffer = new ObjectOutputStream(new FileOutputStream(_nomeArquivo));
-		buffer.writeObject(_objeto);
+		buffer.writeObject(_objeto.toString());
 		buffer.close();
 	}
 

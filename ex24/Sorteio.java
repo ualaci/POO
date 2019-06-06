@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Sorteio implements Serializable {
 	/** Data do sorteio */
 	private Data data;
-	private NumeroSorteado numeroSorteado;
+	private NumeroSorteado numeroSorteado = new NumeroSorteado();
 	/**
 	 * construtor para inicializar valores nos campos
 	 *
